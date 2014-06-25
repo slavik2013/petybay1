@@ -8,8 +8,9 @@ import java.io.Serializable;
  * The persistent class for the location database table.
  * 
  */
-@Entity(name = "location")
+@Entity
 @NamedQuery(name="Location.findAll", query="SELECT l FROM Location l")
+@Table(name = "location")
 public class Location implements Serializable {
 	private static final long serialVersionUID = 1L;
 

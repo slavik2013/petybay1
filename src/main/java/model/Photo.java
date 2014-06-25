@@ -8,8 +8,9 @@ import java.io.Serializable;
  * The persistent class for the photo database table.
  * 
  */
-@Entity(name = "photo")
+@Entity
 @NamedQuery(name="Photo.findAll", query="SELECT p FROM Photo p")
+@Table(name = "photo")
 public class Photo implements Serializable {
 	private static final long serialVersionUID = 1L;
 

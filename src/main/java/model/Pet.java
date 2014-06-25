@@ -10,8 +10,9 @@ import java.util.List;
  * The persistent class for the pet database table.
  * 
  */
-@Entity(name = "pet")
+@Entity
 @NamedQuery(name="Pet.findAll", query="SELECT p FROM Pet p")
+@Table(name = "pet")
 //@JsonIgnoreProperties({ "location", "user" , "photos" , "breeds"})
 public class Pet implements Serializable {
 	private static final long serialVersionUID = 1L;
