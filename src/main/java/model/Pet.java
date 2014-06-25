@@ -10,7 +10,7 @@ import java.util.List;
  * The persistent class for the pet database table.
  * 
  */
-@Entity
+@Entity(name = "pet")
 @NamedQuery(name="Pet.findAll", query="SELECT p FROM Pet p")
 //@JsonIgnoreProperties({ "location", "user" , "photos" , "breeds"})
 public class Pet implements Serializable {

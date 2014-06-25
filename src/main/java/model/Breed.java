@@ -8,7 +8,7 @@ import java.io.Serializable;
  * The persistent class for the breed database table.
  * 
  */
-@Entity
+@Entity(name = "breed")
 @NamedQuery(name="Breed.findAll", query="SELECT b FROM Breed b")
 public class Breed implements Serializable {
 	private static final long serialVersionUID = 1L;
