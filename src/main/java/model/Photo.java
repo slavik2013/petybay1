@@ -1,5 +1,7 @@
 package model;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -24,6 +26,7 @@ public class Photo implements Serializable {
 	private String isPhotoMain;
 
 	//bi-directional many-to-one association to Pet
+    @JsonIgnore
 	@ManyToOne
 	private Pet pet;
 

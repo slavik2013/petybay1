@@ -5,7 +5,8 @@
         <div class="col-sm-6 col-md-4" ng-repeat="pet in pets">
             <div class="thumbnail">
                 <!--                  <img data-src="holder.js/300x200" alt="...">-->
-                <img data-src="resources/js/holder.js/300x200" alt="...">
+                <!--<img data-src="resources/js/holder.js/300x200" alt="...">-->
+                <img ng-src="{{pet.photos[0].filepath}}"/>
                 <div class="caption">
                     <h3>{{pet.id}}</h3>
                     <ul>
