@@ -196,18 +196,18 @@ public class Pet implements Serializable {
 		this.photos = photos;
 	}
 
-	public Photo addPhoto(Photo photo) {
-		getPhotos().add(photo);
-		photo.setPet(this);
-
-		return photo;
-	}
-
-	public Photo removePhoto(Photo photo) {
-		getPhotos().remove(photo);
-		photo.setPet(null);
-
-		return photo;
-	}
+//	public Photo addPhoto(Photo photo) {
+//		getPhotos().add(photo);
+//		photo.setPet(this);
+//
+//		return photo;
+//	}
+//
+//	public Photo removePhoto(Photo photo) {
+//		getPhotos().remove(photo);
+//		photo.setPet(null);
+//
+//		return photo;
+//	}
 
 }
