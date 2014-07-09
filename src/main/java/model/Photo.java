@@ -26,9 +26,9 @@ public class Photo implements Serializable {
 	private String isPhotoMain;
 
 	//bi-directional many-to-one association to Pet
-//    @JsonIgnore
-//	@ManyToOne
-//	private Pet pet;
+    @JsonIgnore
+	@ManyToOne
+	private Pet pet;
 
 	public Photo() {
 	}
@@ -57,12 +57,12 @@ public class Photo implements Serializable {
 		this.isPhotoMain = isPhotoMain;
 	}
 
-//	public Pet getPet() {
-//		return this.pet;
-//	}
+	public Pet getPet() {
+		return this.pet;
+	}
 
-//	public void setPet(Pet pet) {
-//		this.pet = pet;
-//	}
+	public void setPet(Pet pet) {
+		this.pet = pet;
+	}
 
 }
