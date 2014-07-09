@@ -71,12 +71,12 @@ public class Pet implements Serializable {
 	private List<Breed> breeds;
 
 
-//    @OneToMany(fetch = FetchType.EAGER)
-//    @JoinColumn(name="pet_id", referencedColumnName="id")
-//	private List<Photo> photos;
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name="pet_id", referencedColumnName="id")
+	private List<Photo> photos;
 
-    @OneToMany(mappedBy="pet", fetch = FetchType.EAGER)
-    private List<Photo> photos;
+//    @OneToMany(mappedBy="pet", fetch = FetchType.EAGER)
+//    private List<Photo> photos;
 
 	public Pet() {
 	}
