@@ -19,6 +19,7 @@ public class Pet implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="id")
 	private int id;
 
 	private String color;
@@ -69,8 +70,9 @@ public class Pet implements Serializable {
     )
 	private List<Breed> breeds;
 
-	//bi-directional many-to-one association to Photo
-	@OneToMany(mappedBy="pet", fetch = FetchType.EAGER)
+
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name="pet_id", referencedColumnName="id")
 	private List<Photo> photos;
 
 	public Pet() {
